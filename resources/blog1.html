@@ -10,11 +10,56 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
             padding: 20px;
             background-color: #f9f9f9;
             color: #333;
             line-height: 2em;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #222;
+        }
+
+        /* Navigation */
+        #nav {
+    
+            margin: 0,0,0,20px;
+            
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        nav li:hover {
+            color: #007BFF;
+        }
+
+        .featured-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 30px;
         }
         h1, h2, h3 {
             color: #004080;
@@ -55,7 +100,18 @@
 </head>
 <body>
 
+    <section class="header">
+        <nav id="nav">
+            <h1>Logo</h1>
+            <ul>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </section>
 <div class="container">
+
+    <img src="https://blogs.iadb.org/caribbean-dev-trends/wp-content/uploads/sites/34/2017/12/Blockchain1.jpg" alt="" class="featured-image">
     <h1>The Importance and Awareness of Blockchain in India</h1>
 
     <h2>Table of Contents</h2>
