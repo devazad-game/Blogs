@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google's Quantum Computer</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        /* Basic Reset */
+        body,
+        h1,
+        h2,
+        ul,
+        p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 2em;
+        }
+
+        /* Navigation */
+        #nav {
+            border-bottom: 1px solid #000;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        nav ul {
+
+            list-style-type: none;
+            padding-top: 35px;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 15px;
+            cursor: pointer;
+
+            font-size: 1.4em;
+        }
+
+        nav li:hover {
+            color: #007BFF;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 70px;
+
+        }
+
+
+
+        section h2 {
+
+            font-size: 1.6em;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+
+        .featured-image {
+
+            margin: 50px 0 30px 0;
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 30px;
+
+        }
+
+        .product-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 30px auto 60px auto;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            font-size: 0.9em;
+            padding-top: 50px;
+            margin-bottom: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* My own fastwind */
+        .f-box-shadow {
+            margin: 50px 0 50px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 40px;
+            padding: 50px;
+        }
+
+        .f-underline {
+            text-decoration: underline;
+        }
+
+        .f-flex {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .f-button {
+            display: inline-flex;
+            /* Change to flex */
+            align-items: center;
+            /* Vertical center */
+            justify-content: center;
+            /* Horizontal center */
+            gap: 4px;
+            /* Space between text and icon */
+            padding: 12px 18px;
+            background: #131921;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+
+        }
+
+        .f-w {
+            color: white;
+        }
+
+        .laptop-scroll {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav id="nav">
+            <img src="/resources/logo.png" alt="" style="height: 90px; width: auto;">
+
+            <ul>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </section>
+    <section class="main">
+        <div class="container">
+            <h2 class="f-underline" style="text-align: center; font-size: 2em;">Best Laptops under ₹60000 in India that
+                you should consider</h2>
+            <img src="/resources/blog3-banner.png" alt="Google Quantum Computer" class="featured-image">
+            <p> These are some hand-picked laptops for college students, offering the best performance and features you
+                can get at this price point.</p>
+            <p><strong>Note From Author:</strong>I am a software engineer myself, and I know the struggles. Let me tell
+                you, these laptops won’t disappoint you. You can do almost anything related to your field —
+                whether it’s game development, graphic designing, video editing, 3D modeling, web development...
+            </p>
+            <br>
+
+            <h2 class="f-underline">Let's skip formalities and head directly to the laptop collections</h2>
+            <br>
+            <section class="f-box-shadow">
+                <h2 class="f-underline">#1 </h2>
+                <img src="/resources/laptop-1.jpeg" alt="" class="product-image">
+                <div class="f-flex">
+                    <h4 class="f-underline">Acer Aspire 7</h4>
+                    <a href="" class="f-button"> <span>Amazon</span> <img src="/resources/amazon-icon.png" alt=""
+                            style="width: 40px; height: auto;"></a>
+
+                </div>
+
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis unde ad dolore? Quas, alias illo
+                    nesciunt voluptatibus repudiandae cum sapiente aut, error, possimus recusandae amet tempora
+                    temporibus dolorem accusantium magni velit dicta blanditiis ea perferendis modi nisi doloremque!
+                    Nostrum dolorem iste quibusdam magnam? Nisi, esse minus possimus dignissimos nostrum sunt!</p>
+                <hr>
+                <br>
+                <h4 class="f-underline">Features</h4>
+
+                <ul>
+                    <li><strong>Type:</strong> Gaming</li>
+                    <li><strong>Processor:</strong> 13th Gen Intel Core i5 13420H</li>
+                    <li><strong>RAM:</strong> 16 GB DDR4 </li>
+                    <li><strong>Graphics:</strong> 6 GB NVIDIA GeForce RTX 3050</li>
+                    <li><strong>Storage:</strong> 512 GB SSD</li>
+                    <li><strong>Display:</strong> 15.6 inches, 1920 x 1080 pixels</li>
+                    <li><strong>Refresh Rate:</strong> 90 Hz IPS</li>
+                    <li><strong>Wireless:</strong> Wi-Fi 7, Bluetooth 5.4</li>
+                    <li><strong>Weight:</strong> 3.42 lbs (1.55 kg)</li>
+                    <li><strong>Battery:</strong> 60 WHrs ,20 hours 6 minutes</li>
+                    <li><strong>OS:</strong> Windows 11 Home</li>
+                    <li><strong>Warranty:</strong> 1 year</li>
+                </ul>
+
+
+                <hr>
+                <h4>Pros</h4>
+                <ul>
+                    <li>Powerful processor for gaming and development</li>
+                    <li>Dedicated graphics card</li>
+                    <li>Ample RAM and storage</li>
+                    <li>Good battery life</li>
+                    <li>High refresh rate display</li>
+                </ul>
+
+                <h4>Cons</h4>
+                <ul>
+                    <li>Heavy weight</li>
+                    <li>Bulky design</li>
+                    <li>Can get warm under heavy load</li>
+                </ul>
+            </section>
+            <br>
+            <h2>Lets move on to the next Laptop</h2>
+            <br>
+            <section class="f-box-shadow">
+                <h2 class="f-underline">#2 </h2>
+                <img src="/resources/acer-alg.jpg" alt="" class="product-image">
+                <div class="f-flex">
+                    <h4 class="f-underline">Acer SmartChoice ALG, 13th Gen Intel Core i5</h4>
+                    <a href="" class="f-button">
+                        <span>Amazon</span>
+                        <img src="/resources/amazon-icon.png" alt="" style="width: 40px; height: auto;">
+                    </a>
+                </div>
+
+                <br>
+                <p>Product description goes here...</p>
+                <hr>
+                <br>
+                <h4 class="f-underline">Features</h4>
+
+                <ul>
+                    <li><strong>Processor:</strong> Intel Core i5-13420H</li>
+                    <li><strong>RAM:</strong> 16 GB DDR4 (Upgradable to 64 GB)</li>
+                    <li><strong>Storage:</strong> 512 GB NVMe SSD PCIe Gen4 (Supports up to 2 TB)</li>
+                    <li><strong>OS:</strong> Windows 11 Home</li>
+                    <li><strong>Display:</strong> 15.6" FHD (1920x1080), 144Hz, 45% NTSC</li>
+                    <li><strong>Graphics:</strong> NVIDIA GeForce RTX 3050 (6 GB GDDR6)</li>
+                    <li><strong>Ports:</strong> 1x USB 2.0 Type-A, 3x USB 3.2 Type-A</li>
+                    <li><strong>Camera:</strong> 1.0M HD with dual microphones</li>
+                    <li><strong>Keyboard:</strong> Multi-color illuminated with numeric pad</li>
+                    <li><strong>Preinstalled Software:</strong> None (Clean OS)</li>
+                </ul>
+
+                <hr>
+                <h4>Pros</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+                <h4>Cons</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+            <section class="f-box-shadow">
+                <h2 class="f-underline">#3 </h2>
+                <img src="/resources/acer-alg.jpg" alt="" class="product-image">
+                <div class="f-flex">
+                    <h4 class="f-underline">HP Victus, 13th Gen Intel Core i5-13420H</h4>
+                    <a href="" class="f-button">
+                        <span>Amazon</span>
+                        <img src="/resources/amazon-icon.png" alt="" style="width: 40px; height: auto;">
+                    </a>
+                </div>
+
+                <br>
+                <p>Product description goes here...</p>
+                <hr>
+                <br>
+                <h4 class="f-underline">Features</h4>
+
+                <ul>
+                    <li><strong>Processor:</strong> Intel Core i5-13420H (8 cores, 12 threads, 12MB cache)</li>
+                    <li><strong>Graphics:</strong> NVIDIA GeForce RTX 3050 (6 GB GDDR6)</li>
+                    <li><strong>RAM:</strong> 16 GB DDR4 (Upgradable)</li>
+                    <li><strong>Storage:</strong> 512 GB PCIe Gen4 NVMe SSD</li>
+                    <li><strong>Display:</strong> 15.6" FHD, 144Hz, anti-glare</li>
+                    <li><strong>Gaming Ready:</strong> Supports popular games like GTA V, Cyberpunk, Call of Duty, etc.
+                    </li>
+                </ul>
+
+                <hr>
+                <h4>Pros</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+                <h4>Cons</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+            <section class="f-box-shadow">
+                <h2 class="f-underline">#4 </h2>
+                <img src="/resources/acer-alg.jpg" alt="" class="product-image">
+                <div class="f-flex">
+                    <h4 class="f-underline">ASUS TUF A15 (2025), AMD Ryzen 7 7445HS</h4>
+                    <a href="" class="f-button">
+                        <span>Amazon</span>
+                        <img src="/resources/amazon-icon.png" alt="" style="width: 40px; height: auto;">
+                    </a>
+                </div>
+
+                <br>
+                <p>Product description goes here...</p>
+                <hr>
+                <br>
+                <h4 class="f-underline">Features</h4>
+
+                <ul>
+                    <li><strong>Processor:</strong> AMD Ryzen 7 7435HS (3.1GHz base, 4.5GHz max, 8 cores, 16 threads)
+                    </li>
+                    <li><strong>RAM:</strong> 16 GB DDR5</li>
+                    <li><strong>Storage:</strong> 512 GB PCIe 4.0 NVMe SSD</li>
+                    <li><strong>Display:</strong> 15.6" FHD (1920x1080), 144Hz, 250nits anti-glare</li>
+                    <li><strong>Graphics:</strong> NVIDIA GeForce RTX 3050 (4 GB GDDR6)</li>
+                    <li><strong>Ports:</strong> USB-C, 3x USB-A, HDMI, LAN, audio jack</li>
+                    <li><strong>OS:</strong> Windows 11 Home</li>
+                    <li><strong>Battery:</strong> 48WHrs</li>
+                    <li><strong>Keyboard:</strong> Backlit RGB keyboard</li>
+                    <li><strong>Camera:</strong> 720p HD with noise-canceling</li>
+                </ul>
+
+                <hr>
+                <h4>Pros</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+                <h4>Cons</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+            <section class="f-box-shadow">
+                <h2 class="f-underline">#5 </h2>
+                <img src="/resources/acer-alg.jpg" alt="" class="product-image">
+                <div class="f-flex">
+                    <h4 class="f-underline">ASUS Vivobook 16X 13th Gen,Intel Core i5-13420H</h4>
+                    <a href="" class="f-button">
+                        <span>Amazon</span>
+                        <img src="/resources/amazon-icon.png" alt="" style="width: 40px; height: auto;">
+                    </a>
+                </div>
+
+                <br>
+                <p>Product description goes here...</p>
+                <hr>
+                <br>
+                <h4 class="f-underline">Features</h4>
+
+                <ul>
+                    <li><strong>Processor:</strong> Intel Core i5-13420H (2.1GHz base, 4.6GHz max, 8 cores, 12 threads)
+                    </li>
+                    <li><strong>Display:</strong> 16.0" FHD+ (1920x1200), 144Hz, 300nits LED</li>
+                    <li><strong>Graphics:</strong> NVIDIA GeForce RTX 3050 (4 GB GDDR6)</li>
+                    <li><strong>RAM:</strong> 16 GB DDR4</li>
+                    <li><strong>Storage:</strong> 512 GB PCIe 4.0 NVMe SSD</li>
+                    <li><strong>Wireless:</strong> Wi-Fi 6, Bluetooth</li>
+                    <li><strong>Connectivity:</strong> USB, HDMI</li>
+                    <li><strong>OS:</strong> Windows 11 Home</li>
+                    <li><strong>Keyboard:</strong> Backlit with numeric keypad</li>
+                </ul>
+
+                <hr>
+                <h4>Pros</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+                <h4>Cons</h4>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+            
+            <h2>Trending Laptops</h2>
+            <section style="margin: 40px 0;">
+                <div class="laptop-scroll">
+                    <div
+                        style="min-width: 150px; text-align: center; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
+                        <img src="/resources/laptop-small1.jpeg" alt="Dell Inspiron"
+                            style="width: 140px; height: 100px; object-fit: cover; border-radius: 4px;">
+                        <h5 style="margin: 8px 0 4px 0; font-size: 14px;">Dell Inspiron 15</h5>
+                        <p style="color: #B12704; font-weight: bold; font-size: 14px;">₹54,999</p>
+                    </div>
+
+                    <div
+                        style="min-width: 150px; text-align: center; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
+                        <img src="/resources/laptop-small2.jpeg" alt="HP Pavilion"
+                            style="width: 140px; height: 100px; object-fit: cover; border-radius: 4px;">
+                        <h5 style="margin: 8px 0 4px 0; font-size: 14px;">HP Pavilion</h5>
+                        <p style="color: #B12704; font-weight: bold; font-size: 14px;">₹52,499</p>
+                    </div>
+
+                    <!-- Add more cards -->
+                </div>
+            </section>
+        </div>
+
+    </section>
+    <a href="/resources/blog1.html">this is the button to go next page</a>
+    <footer>
+        <section class="footer">
+
+            <p style="font-size: 1.5em;">Contact us on social media :
+                <span style="letter-spacing: 10px;">
+                    <a href="mailto:deepanshu1701azad@gmail.com" class="f-w">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_devazad/" class="f-w">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="" class="f-w">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="" class="f-w">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                </span>
+            </p>
+
+
+
+
+            <br>
+            <p style="color: #555;">&copy; 2025 - DEVAZAD</p>
+        </section>
+    </footer>
+</body>
+
+</html>
