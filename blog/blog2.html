@@ -31,12 +31,12 @@
         nav ul {
 
             list-style-type: none;
-            padding-top: 35px;
+            padding-top: 30px;
         }
 
         nav li {
             display: inline;
-            margin: 0 15px;
+            padding: 0 15px;
             cursor: pointer;
 
             font-size: 1.4em;
@@ -57,8 +57,6 @@
 
 
         section h2 {
-
-            font-size: 1.6em;
             color: #222;
             margin-bottom: 10px;
         }
@@ -141,6 +139,44 @@
             gap: 15px;
             padding: 10px 0;
         }
+
+        /* Mobile */
+        @media (max-width: 767px) {
+            h1{
+                font-size: 1.6em;
+            }
+            h2{
+                font-size: 1.4em;
+            }
+            
+            nav li{
+                font-size: 1.3em;
+                padding: 0px 8px;
+            }
+            .container {
+                padding: 20px;
+            }
+            
+            .f-flex {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .f-box-shadow {
+                padding: 30px;
+            }
+
+            .laptop-scroll {
+                gap: 10px;
+            }
+
+            .laptop-card {
+                min-width: 120px;
+            }
+            footer p{
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 
@@ -157,8 +193,8 @@
     </section>
     <section class="main">
         <div class="container">
-            <h2 class="f-underline" style="text-align: center; font-size: 2em;">Best Laptops under ₹60000 in India that
-                you should consider</h2>
+            <h1 class="f-underline" style="text-align: center;">Best Laptops under ₹60000 in India that
+                you should consider</h1>
             <img src="/resources/blog3-banner.png" alt="Google Quantum Computer" class="featured-image">
             <p> These are some hand-picked laptops for college students, offering the best performance and features you
                 can get at this price point.</p>
@@ -223,7 +259,7 @@
                 <img src="/resources/lenovo-loq.jpg" alt="" class="product-image">
                 <div class="f-flex">
                     <h4 class="f-underline">Lenovo LOQ, AMD Ryzen 5 7235HS</h4>
-                    <a href="https://amzn.to/3KlTWBP"  target="_blank" class="f-button">
+                    <a href="https://amzn.to/3KlTWBP" target="_blank" class="f-button">
                         <span>Amazon</span>
                         <img src="/resources/amazon-icon.png" alt="" style="width: 40px; height: auto;">
                     </a>
@@ -445,8 +481,8 @@
     <footer>
         <section class="footer">
 
-            <p style="font-size: 1.5em;">Contact us on social media :
-                <span style="letter-spacing: 10px;">
+            <p style="font-size: 1.5em;">Contact us through social media :
+                <span style="letter-spacing: 8px;">
                     <a href="mailto:deepanshu1701azad@gmail.com" class="f-w">
                         <i class="fa-solid fa-envelope"></i>
                     </a>
@@ -473,5 +509,3 @@
 </body>
 
 </html>
-
-
