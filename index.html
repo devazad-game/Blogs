@@ -1,191 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-adsense-account" content="ca-pub-9501968874906000">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9501968874906000"
-     crossorigin="anonymous"></script>
-    <title>Google's Quantum Computer</title>
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <title>TechBlog - Latest Tech Reviews & Guides</title>
     <style>
         /* Basic Reset */
-        body, h1, h2, ul, p {
+        body,
+        h1,
+        h2,
+        ul,
+        p {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
             line-height: 1.6;
         }
+        a {
+            text-decoration: none;
+        }
 
         /* Layout */
         .container {
-            max-width: 700px;
-            margin: 30px auto;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            
-            border-radius: 8px;
-           
-        }
-
-        header {
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            color: #222;
         }
 
         /* Navigation */
         #nav {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #f0f0f0;
         }
 
         nav ul {
             list-style-type: none;
-            padding-top: 35px;
+            display: flex;
+            gap: 30px;
         }
 
         nav li {
-            display: inline;
-            margin: 0 15px;
             cursor: pointer;
             font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
         }
 
         nav li:hover {
             color: #007BFF;
         }
 
-        /* Section Styling */
-        section {
-            margin-bottom: 20px;
+        /* Featured Blog Section */
+        .featured-blog {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            color: white;
+            min-height: 400px;
         }
 
-        section h2 {
-            font-size: 1.8em;
-            color: #222;
-            margin-bottom: 10px;
+        .blog-content {
+            flex: 1;
         }
 
-        section p, section ul {
-            margin-bottom: 10px;
+        .blog-image {
+            flex: 1;
+            text-align: center;
         }
 
-        .featured-image {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        .blog-image img {
             max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 30px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .featured-blog h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .featured-blog h2 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .featured-blog p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .read-more:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Blog Grid Styles */
+        .blog-grid {
+            padding: 40px 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-thumbnail {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .blog-card h3 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .blog-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .read-more-small {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
         }
 
         footer {
+            background-color: #000;
+            color: white;
             text-align: center;
             font-size: 0.9em;
-            color: #555;
-            margin-top: 30px;
+            padding-top: 50px;
+            margin-bottom: 0;
+        }
+
+        .f-w {
+            color: white;
+        }
+
+        .read-more-small:hover {
+            color: #0056b3;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .featured-blog {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
-    <section class="header">
+    <div class="container">
+        <!-- Navigation -->
         <nav id="nav">
-            <img src="/resources/logo.png" alt="" style="height: 120px; width: auto;">
-            
+            <img src="/resources/logo.png" alt="TechBlog Logo" style="height: 80px; width: auto;">
             <ul>
+                <li>Home</li>
                 <li>About</li>
                 <li>Contact</li>
             </ul>
         </nav>
-    </section>
-    <div class="container">
-    <section class="main">
-            <header>
-                <h1>Google's Quantum Computer</h1>
-            </header>
 
-            <img src="/resources/iStock-1455925649.jpg" alt="Google Quantum Computer" class="featured-image">
+        <!-- Featured Blog Post -->
+        <section class="featured-blog">
+            <div class="blog-content">
+                <h1>Best Laptops Under ₹60000</h1>
+                <h2>Top Picks for Students & Professionals</h2>
+                <p>Discover hand-picked laptops that offer the perfect balance of performance and affordability. From
+                    gaming to coding, find your perfect companion for college and work without breaking the bank...</p>
+                <a href="blog/blog2.html" class="read-more">Read Full Article →</a>
+            </div>
+            <div class="blog-image">
+                <img src="/resources/blog3-banner.png" alt="Best Laptops Under 60000">
+            </div>
+        </section>
+        <!-- Other Blog Posts Section -->
+        <section class="blog-grid">
+            <h2 style="text-align: center; margin: 60px 0 30px 0; font-size: 2.2em;">Latest Articles</h2>
 
-            <section>
-                <h2>What is Quantum Computing?</h2>
-                <p>
-                    At its core, quantum computing harnesses the peculiar properties of quantum mechanics to process information. Unlike classical computers that use bits as binary units (0 or 1), quantum computers use quantum bits, or qubits. Qubits can exist in multiple states simultaneously (a phenomenon known as superposition) and can also be entangled, allowing them to interact in ways that classical bits cannot.
-                </p>
-            </section>
+            <div class="grid-container">
+                <!-- Quantum Computing Blog -->
+                <div class="blog-card">
+                    <img src="/resources/iStock-1455925649.jpg" alt="Quantum Computing" class="blog-thumbnail">
+                    <div class="card-content">
+                        <h3>Understanding Quantum Computing</h3>
+                        <p>Explore the future of computing with quantum mechanics and qubits that revolutionize data
+                            processing...</p>
+                        <a href="/blog/blog1.html" class="read-more-small">Read More</a>
+                    </div>
+                </div>
 
-            <section>
-                <h2>Introduction to Quantum Computing</h2>
-                <p>
-                    At its core, quantum computing harnesses the peculiar properties of quantum mechanics to process information. Unlike classical computers that use bits as binary units (0 or 1), quantum computers use quantum bits, or qubits. Qubits can exist in multiple states simultaneously (a phenomenon known as superposition) and can also be entangled, allowing them to interact in ways that classical bits cannot.
-                </p>
-            </section>
-            
-            <section>
-                <h2>Google's Quantum Breakthrough</h2>
-                <h3>What is Quantum Supremacy?</h3>
-                <p>
-                    In 2019, Google announced a major milestone known as “quantum supremacy.” This signifies a point where quantum computers outperform classical systems for specific tasks. Google’s Sycamore processor completed a computation in 200 seconds that would have taken the fastest supercomputer thousands of years.
-                </p>
-                <h3>The Sycamore Processor</h3>
-                <p>
-                    Google's quantum computer operates with a unique and innovative architecture called the Sycamore processor. This processor consists of a 2D grid of qubits interconnected through complex circuits. By manipulating the qubits and exploiting quantum mechanical phenomena, Google's quantum computer can execute algorithms that are virtually impossible for classical computers to perform in a reasonable timeframe.
-                </p>
-                <p>
-                    The Sycamore processor achieved a groundbreaking feat in 2019 when it successfully completed a calculation in just 200 seconds that would take the most powerful classical computer approximately 10,000 years to accomplish. This event, known as quantum supremacy, marked a turning point in the field and demonstrated the immense potential of quantum computers.
-                </p>
-            </section>
-            
-            <section>
-                <h2>Potential Applications of Quantum Computing</h2>
-                <p>
-                    One of the most remarkable aspects of Google's quantum computer is its potential application in fields such as cryptography, materials science, optimization problems, and machine learning.
-                </p>
-                <ul>
-                    <li><strong>Cryptography:</strong> Revolutionizing encryption techniques and cracking existing algorithms.</li>
-                    <li><strong>Drug Discovery:</strong> Simulating complex molecules to accelerate medical advancements.</li>
-                    <li><strong>Machine Learning:</strong> Solving optimization problems and enhancing AI capabilities.</li>
-                    <li><strong>Material Design:</strong> Simulating chemical reactions for innovative designs.</li>
-                </ul>
-            </section>
-            
-            <section>
-                <h2>Challenges in Quantum Computing</h2>
-                <h3>Overcoming Quantum Decoherence</h3>
-                <p>
-                    While Google's quantum computer holds tremendous potential, it is still in its infancy. Overcoming significant challenges, such as quantum decoherence and error correction, remains a crucial focus for researchers in this field. Quantum decoherence refers to the undesired interactions that cause qubits to lose their coherent quantum states, leading to errors in computations.
-                </p>
-                <h3>Developing Error Correction</h3>
-                <p>
-                    Developing robust error correction techniques and enhancing the stability of qubits are essential steps to advancing quantum computing. These efforts are critical to unlocking the full potential of this technology.
-                </p>
-            </section>
-            
-            <section>
-                <h2>Google's Quantum Vision</h2>
-                <p>
-                    To further advance the field, Google has made its quantum computer accessible to external developers and researchers through the Quantum Computing Cloud platform, known as Cirq. This move fosters collaboration and allows scientists around the world to experiment, develop, and optimize quantum algorithms. By democratizing access to quantum computing, Google aims to accelerate progress and drive innovations across various disciplines.
-                </p>
-            </section>
-            
-            <section>
-                <h2>Competition and Future Outlook</h2>
-                <p>
-                    Google is one among several other technology giants, including IBM and Microsoft, investing heavily in quantum computing research. However, Google's unique approach and notable achievements have firmly established them as frontrunners in the field. Their commitment to pushing the boundaries of what is possible in computing signifies a genuine belief in the transformative power of quantum computers.
-                </p>
-                <p>
-                    While it may be several years before quantum computers become accessible for widespread use, Google's advancements serve as a testament to the astonishing potential that lies within this technology. As they continue to refine their quantum computer, we can expect Google to pave the way for new discoveries, solve complex problems, and unlock tremendous value across multiple industries.
-                </p>
-            </section>
-            <a href="/blog/blog2.html">this is the button to go next page</a>
-        </div>
-    <section class="footer">
-        <footer>
-            <p>&copy; 2025 - Quantum Tech Insights</p>
-        </footer>
-    </section>
+                <!-- Blockchain Blog -->
+                <div class="blog-card">
+                    <img src="/resources/iStock-1455925649.jpg" alt="Blockchain Technology" class="blog-thumbnail">
+                    <div class="card-content">
+                        <h3>Blockchain: Beyond Cryptocurrency</h3>
+                        <p>Discover how blockchain technology is transforming industries from healthcare to supply chain
+                            management...</p>
+                        <a href="blog/blog3.html" class="read-more-small">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Phones Blog -->
+                <div class="blog-card">
+                    <img src="/resources/iStock-1455925649.jpg" alt="Mobile Phones under 20k" class="blog-thumbnail">
+                    <div class="card-content">
+                        <h3>Best Mobiles Under ₹20,000</h3>
+                        <p>Find the perfect budget smartphone with amazing cameras, performance, and battery life
+                            without breaking the bank...</p>
+                        <a href="mobiles-under-20k.html" class="read-more-small">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <section class="footer">
+
+            <p style="font-size: 1.5em;">Contact us through social media :
+                <span style="letter-spacing: 8px;">
+                    <a href="mailto:deepanshu1701azad@gmail.com" class="f-w">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_devazad/" class="f-w">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="" class="f-w">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="" class="f-w">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                </span>
+            </p>
+
+
+
+
+            <br>
+            <p style="color: #555;">&copy; 2025 - DEVAZAD</p>
+        </section>
+    </footer>
 </body>
-</html>
 
+</html>
